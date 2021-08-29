@@ -1,7 +1,7 @@
 #authors Michelle Quintero Hernandez
 
 from selenium import webdriver
-from model.Car import Car
+from model.car import Car
 
 #Search elements declarations
 car = "renault-12"
