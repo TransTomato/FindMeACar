@@ -9,3 +9,6 @@ class Car:
         self.title = title
         self.location = location
         self.year = year
+
+    def __repr__(self):
+        return "Precio: "+str(self.price)+"\nTitulo: "+self.title+"\nUbicacion: "+self.location+"ano: "+self.year
