@@ -1,5 +1,9 @@
 #authors Michelle Quintero Hernandez
 
+#Setting path
+import sys
+sys.path.insert(0, './')
+
 from selenium import webdriver
 from model.car import Car
 
@@ -26,13 +30,17 @@ results = driver.find_elements_by_class_name("ui-search-layout__item")
 cars = list()
 for r in results:
     price = int(r.find_element_by_class_name("price-tag-fraction").text.replace(".",""))
-    title = r.find_element_by_class_name("ui-search-item__title ui-search-item__group__element").text
-    location = r.find_element_by_class_name("ui-search-item__group__element ui-search-item__location").text
+    #title = r.find_element_by_class_name("ui-search-item__title ui-search-item__group__element").text
+    #location = r.find_element_by_class_name("ui-search-item__group__element ui-search-item__location").text
     year = r.find_element_by_class_name("ui-search-card-attributes__attribute").text
+    title = "title"
+    location = "location"
+    #year = "year"
+
 
     car = Car(price,title,location,year)
     cars.append(car)
 
-print(cars)
+print(cars[0].price)
 
     
